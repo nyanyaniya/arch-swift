@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE94A2E8229A2C8D004EA326 /* Webservices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A2E7229A2C8D004EA326 /* Webservices.swift */; };
+		FE94A2EB229A9907004EA326 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A2EA229A9907004EA326 /* Order.swift */; };
+		FE94A2EE229A9BEA004EA326 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A2ED229A9BEA004EA326 /* OrderViewModel.swift */; };
+		FE94A2F0229B504E004EA326 /* AddCoffeeOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE94A2EF229B504E004EA326 /* AddCoffeeOrderViewModel.swift */; };
 		FED143882295F8B800D35F18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED143872295F8B800D35F18 /* AppDelegate.swift */; };
 		FED1438D2295F8B800D35F18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED1438B2295F8B800D35F18 /* Main.storyboard */; };
 		FED1438F2295F8B900D35F18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED1438E2295F8B900D35F18 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE94A2E7229A2C8D004EA326 /* Webservices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservices.swift; sourceTree = "<group>"; };
+		FE94A2EA229A9907004EA326 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		FE94A2ED229A9BEA004EA326 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		FE94A2EF229B504E004EA326 /* AddCoffeeOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderViewModel.swift; sourceTree = "<group>"; };
 		FED143842295F8B800D35F18 /* HotCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED143872295F8B800D35F18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FED1438C2295F8B800D35F18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +84,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE94A2E6229A2C5F004EA326 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FE94A2E7229A2C8D004EA326 /* Webservices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FE94A2E9229A98FE004EA326 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE94A2EA229A9907004EA326 /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FE94A2EC229A9BDB004EA326 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE94A2ED229A9BEA004EA326 /* OrderViewModel.swift */,
+				FE94A2EF229B504E004EA326 /* AddCoffeeOrderViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		FED1437B2295F8B800D35F18 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +132,9 @@
 		FED143862295F8B800D35F18 /* HotCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				FE94A2EC229A9BDB004EA326 /* View Models */,
+				FE94A2E9229A98FE004EA326 /* Models */,
+				FE94A2E6229A2C5F004EA326 /* Services */,
 				FED143B52295FB7000D35F18 /* Controllers */,
 				FED143872295F8B800D35F18 /* AppDelegate.swift */,
 				FED1438B2295F8B800D35F18 /* Main.storyboard */,
@@ -269,6 +305,10 @@
 			files = (
 				FED143B72295FCDB00D35F18 /* OrdersTableViewController.swift in Sources */,
 				FED143882295F8B800D35F18 /* AppDelegate.swift in Sources */,
+				FE94A2EB229A9907004EA326 /* Order.swift in Sources */,
+				FE94A2F0229B504E004EA326 /* AddCoffeeOrderViewModel.swift in Sources */,
+				FE94A2EE229A9BEA004EA326 /* OrderViewModel.swift in Sources */,
+				FE94A2E8229A2C8D004EA326 /* Webservices.swift in Sources */,
 				FED143B92295FD0200D35F18 /* AddOrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

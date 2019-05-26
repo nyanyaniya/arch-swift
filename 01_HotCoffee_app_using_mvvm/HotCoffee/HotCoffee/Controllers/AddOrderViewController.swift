@@ -10,5 +10,22 @@ import Foundation
 import UIKit
 
 class AddOrderViewController: UIViewController {
-    // https://guarded-retreat-82533.herokuapp.com/orders
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    private var vm = AddCoffeeOrderViewModel()
+    
+}
+
+extension AddOrderViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.vm.types.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CoffeeTypeTableViewCell", for: indexPath)
+        cell.textLabel?.text = self.vm.types[indexPath.row]
+        return cell
+    }
 }
