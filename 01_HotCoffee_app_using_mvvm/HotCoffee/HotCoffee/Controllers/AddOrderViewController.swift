@@ -37,6 +37,9 @@ class AddOrderViewController: UIViewController {
         self.view.addSubview(self.coffeeSizesSegmentedControl)
         self.coffeeSizesSegmentedControl.topAnchor.constraint(equalTo: self.tableView.bottomAnchor, constant: 32).isActive = true
         self.coffeeSizesSegmentedControl.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        nameTextField.delegate = self
+        emailTextField.delegate = self
     }
     
     @IBAction func save() {
@@ -88,5 +91,14 @@ extension AddOrderViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
+    }
+}
+
+extension AddOrderViewController : UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 改行ボタンが押されたら、キーボードを閉じる
+        textField.resignFirstResponder()
+        return true
     }
 }
