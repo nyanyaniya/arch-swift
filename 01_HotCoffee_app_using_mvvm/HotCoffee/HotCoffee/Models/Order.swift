@@ -21,6 +21,7 @@ enum CoffeeSize: String, Codable, CaseIterable {
     case large
 }
 
+// TODO: dto to vo
 struct Order: Codable {
     let name: String
     let email: String
@@ -28,6 +29,7 @@ struct Order: Codable {
     let size: CoffeeSize
 }
 
+// TODO: to createResource()
 extension Order {
     
     static var all: Resource<[Order]> = {
