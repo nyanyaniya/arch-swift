@@ -105,35 +105,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fvH-50-GY4">
-                                <rect key="frame" x="111.5" y="568" width="191" height="29"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kvA-54-8kD" firstAttribute="top" secondItem="fvH-50-GY4" secondAttribute="bottom" constant="64" id="4vF-Qr-oeb"/>
+                            <constraint firstItem="kvA-54-8kD" firstAttribute="top" secondItem="oAA-VV-ufJ" secondAttribute="bottom" constant="124" id="1mn-uC-Mqi"/>
                             <constraint firstItem="38T-ZY-Ohq" firstAttribute="centerX" secondItem="dha-Od-eoW" secondAttribute="centerX" id="AfN-SA-WWP"/>
                             <constraint firstItem="38T-ZY-Ohq" firstAttribute="top" secondItem="kvA-54-8kD" secondAttribute="bottom" constant="16" id="CG0-Hn-wdH"/>
                             <constraint firstItem="oAA-VV-ufJ" firstAttribute="height" secondItem="8md-2y-p5b" secondAttribute="height" multiplier="0.5" id="EO8-Xo-cqJ"/>
-                            <constraint firstItem="fvH-50-GY4" firstAttribute="centerX" secondItem="8md-2y-p5b" secondAttribute="centerX" id="Vw1-K6-9Ur"/>
                             <constraint firstItem="oAA-VV-ufJ" firstAttribute="top" secondItem="dha-Od-eoW" secondAttribute="top" id="Xkf-Lo-OyZ"/>
                             <constraint firstItem="oAA-VV-ufJ" firstAttribute="leading" secondItem="dha-Od-eoW" secondAttribute="leading" id="cgL-gg-XcI"/>
-                            <constraint firstItem="fvH-50-GY4" firstAttribute="top" secondItem="oAA-VV-ufJ" secondAttribute="bottom" constant="32" id="dpt-pe-stI"/>
                             <constraint firstItem="oAA-VV-ufJ" firstAttribute="width" secondItem="8md-2y-p5b" secondAttribute="width" id="mi5-zM-Z3b"/>
                             <constraint firstItem="kvA-54-8kD" firstAttribute="centerX" secondItem="dha-Od-eoW" secondAttribute="centerX" id="rGz-At-WZH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dha-Od-eoW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="18O-h3-IVR">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="vOW-e9-Oiu"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="eAe-8a-Yc6"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="vOW-e9-Oiu">
+                            <connections>
+                                <action selector="close" destination="Qh6-zi-Q2T" id="oiY-9e-7b6"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="eAe-8a-Yc6">
+                            <connections>
+                                <action selector="save" destination="Qh6-zi-Q2T" id="cZ8-Lc-lD7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="38T-ZY-Ohq" id="wS7-4h-ksI"/>
+                        <outlet property="nameTextField" destination="kvA-54-8kD" id="h4d-ws-UGD"/>
                         <outlet property="tableView" destination="oAA-VV-ufJ" id="LCm-sQ-PGN"/>
                     </connections>
                 </viewController>
